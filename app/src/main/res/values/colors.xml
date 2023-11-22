@@ -3,6 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white_transparent">#50FFFFFF</color>
+    <color name="background">#BCBBF5</color>
     <color name="violet1">#B1A1FF</color>
     <color name="violet2">#7F7DEB</color>
     <color name="violet3">#6444E5</color>
