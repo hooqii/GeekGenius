@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="350dp"
+    android:height="350dp"
+    android:viewportWidth="350"
+    android:viewportHeight="350">
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/geek_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/geek_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GeekGenius"/>
+</vector>
