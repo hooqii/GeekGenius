@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.content.Intent
+
 
 class WellcomePage : AppCompatActivity() {
 
@@ -19,6 +21,11 @@ class WellcomePage : AppCompatActivity() {
 
         btnLoginGoogle = findViewById(R.id.btnLoginGoogle)
         btnLoginEmail = findViewById(R.id.btnLoginEmail)
+
+        btnLoginEmail.setOnClickListener {
+            val intent = Intent(this, RegisterPage::class.java)
+            startActivity(intent)
+        }
 
     }
 }
