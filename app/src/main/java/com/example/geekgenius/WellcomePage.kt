@@ -21,8 +21,15 @@ class WellcomePage : AppCompatActivity() {
 
         btnLoginGoogle = findViewById(R.id.btnLoginGoogle)
         btnLoginEmail = findViewById(R.id.btnLoginEmail)
+        textLinkRegister = findViewById(R.id.linkLogin)
+
 
         btnLoginEmail.setOnClickListener {
+            val intent = Intent(this, LoginPage::class.java)
+            startActivity(intent)
+        }
+
+        textLinkRegister.setOnClickListener {
             val intent = Intent(this, RegisterPage::class.java)
             startActivity(intent)
         }

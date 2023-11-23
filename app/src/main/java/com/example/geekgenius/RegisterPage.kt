@@ -6,9 +6,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import android.content.Intent
+import android.widget.TextView
 
 
 class RegisterPage : AppCompatActivity() {
+
+    private lateinit var textLinkLogin : TextView
+    private lateinit var buttonBack : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register_page)
@@ -17,6 +21,8 @@ class RegisterPage : AppCompatActivity() {
         val editTextPassword = findViewById<EditText>(R.id.editText)
         val editTextPassword2 = findViewById<EditText>(R.id.editText2)
         val buttonRegister = findViewById<Button>(R.id.btnRegister)
+        textLinkLogin = findViewById(R.id.linkLogin)
+        buttonBack = findViewById(R.id.btnBack)
 
         buttonRegister.setOnClickListener {
             val email = editTextEmail.text.toString().trim()
@@ -33,6 +39,13 @@ class RegisterPage : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Isi semua kolom dengan benar", Toast.LENGTH_SHORT).show()
             }
+        }
+        textLinkLogin.setOnClickListener {
+            val intent = Intent(this, LoginPage::class.java)
+            startActivity(intent)
+        }
+        buttonBack.setOnClickListener{
+            finish()
         }
     }
 
