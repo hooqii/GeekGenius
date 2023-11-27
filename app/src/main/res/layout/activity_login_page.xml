@@ -53,6 +53,7 @@
         android:layout_height="55dp"
         android:layout_marginHorizontal="15dp"
         android:layout_marginTop="32dp"
+
         android:background="@drawable/edit_text_background"
         android:fontFamily="@font/poppins_regular"
         android:hint="Email"
@@ -64,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <FrameLayout
-        android:id="@+id/etPassword"
+        android:id="@+id/frameLayout"
         android:layout_width="350dp"
         android:layout_height="55dp"
         android:layout_marginTop="20dp"
@@ -78,14 +79,14 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/etPasswordL"
+                android:id="@+id/etPassword"
                 android:layout_width="350dp"
                 android:layout_height="55dp"
                 android:layout_marginHorizontal="15dp"
                 android:background="@drawable/edit_text_background"
                 android:fontFamily="@font/poppins_regular"
                 android:hint="Password"
-                android:inputType="textEmailAddress"
+                android:inputType="textPassword"
                 android:paddingStart="30dp"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -118,9 +119,10 @@
         android:text="Log in"
         android:textAllCaps="false"
         android:textColor="@color/white"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
     <TextView
         android:id="@+id/textView"
@@ -135,7 +137,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <TextView
-        android:id="@+id/linkLogin"
+        android:id="@+id/linkRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"

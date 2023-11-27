@@ -5,34 +5,29 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.content.Intent
+import com.example.geekgenius.databinding.ActivityWellcomePageBinding
+import com.google.firebase.auth.FirebaseAuth
 
 
 class WellcomePage : AppCompatActivity() {
 
-    //Binding
-//    private lateinit var binding :
+    private lateinit var binding : ActivityWellcomePageBinding
+    private lateinit var firebaseAuth: FirebaseAuth
 
-    private lateinit var btnLoginGoogle : Button
-    private lateinit var btnLoginEmail : Button
-    private lateinit var textLinkRegister : TextView
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        binding = ActivityWellcomePageBinding.inflate(layoutInflater)
+        firebaseAuth = FirebaseAuth.getInstance()
+
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_wellcome_page)
+        setContentView(binding.root)
 
-        btnLoginGoogle = findViewById(R.id.btnLoginGoogle)
-        btnLoginEmail = findViewById(R.id.btnLoginEmail)
-        textLinkRegister = findViewById(R.id.linkLogin)
-
-
-        btnLoginEmail.setOnClickListener {
-            val intent = Intent(this, LoginPage::class.java)
-            startActivity(intent)
+        binding.btnLoginEmail.setOnClickListener {
+            startActivity(Intent(this, LoginPage::class.java))
         }
 
-        textLinkRegister.setOnClickListener {
-            val intent = Intent(this, RegisterPage::class.java)
-            startActivity(intent)
+        binding.linkRegister.setOnClickListener {
+            startActivity(Intent(this, RegisterPage::class.java))
         }
-
     }
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "896186195615",
+    "project_id": "geek-genius",
+    "storage_bucket": "geek-genius.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896186195615:android:373ab8b4b6168ca5784caa",
+        "android_client_info": {
+          "package_name": "com.example.geekgenius"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS0SVsC5ppd3-99NoObtum3P-4a7uGCvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

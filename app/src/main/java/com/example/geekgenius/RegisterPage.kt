@@ -7,49 +7,63 @@ import android.widget.EditText
 import android.widget.Toast
 import android.content.Intent
 import android.widget.TextView
+import com.example.geekgenius.databinding.ActivityRegisterPageBinding
+import com.example.geekgenius.databinding.ActivityWellcomePageBinding
+import com.google.firebase.auth.FirebaseAuth
 
 
 class RegisterPage : AppCompatActivity() {
 
-    private lateinit var textLinkLogin : TextView
-    private lateinit var buttonBack : Button
+    private lateinit var binding: ActivityRegisterPageBinding
+    private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        binding = ActivityRegisterPageBinding.inflate(layoutInflater)
+        firebaseAuth = FirebaseAuth.getInstance()
+
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register_page)
+        setContentView(binding.root)
 
-        val editTextEmail = findViewById<EditText>(R.id.etEmail)
-        val editTextPassword = findViewById<EditText>(R.id.editText)
-        val editTextPassword2 = findViewById<EditText>(R.id.editText2)
-        val buttonRegister = findViewById<Button>(R.id.btnRegister)
-        textLinkLogin = findViewById(R.id.linkLogin)
-        buttonBack = findViewById(R.id.btnBack)
-
-        buttonRegister.setOnClickListener {
-            val email = editTextEmail.text.toString().trim()
-            val password = editTextPassword.text.toString().trim()
-            val password2 = editTextPassword2.text.toString().trim()
-
-            if (isValidInput(email, password, password2)) {
-                //data belum ada yang nampung
-                Toast.makeText(this, "Registrasi berhasil", Toast.LENGTH_SHORT).show()
-
-                val intent = Intent(this, LoginPage::class.java)
-                startActivity(intent)
-                finish()
+        binding.btnRegister.setOnClickListener {
+            val email = binding.etEmail.text.toString()
+            val password = binding.etPassword.text.toString()
+            val confirmPassword = binding.etConfirmPassword.text.toString()
+            if (email.isNotEmpty() && password.isNotEmpty() && confirmPassword.isNotEmpty()) {
+                if (password.length >= 6 && confirmPassword.length >= 6) {
+                    if (password == confirmPassword) {
+                        firebaseAuth.createUserWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(this) { task ->
+                                if (task.isSuccessful) {
+                                    Toast.makeText(this, "Register berhasil", Toast.LENGTH_SHORT)
+                                        .show()
+                                    val intent = Intent(this, LoginPage::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                } else {
+                                    Toast.makeText(this, "Register gagal", Toast.LENGTH_SHORT)
+                                        .show()
+                                }
+                            }
+                    } else {
+                        Toast.makeText(
+                            this,
+                            "Password & confirm password berbeda",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                } else {
+                    Toast.makeText(this, "Password minimal 6 karakter", Toast.LENGTH_SHORT).show()
+                }
             } else {
-                Toast.makeText(this, "Isi semua kolom dengan benar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Mohon isi semua fields yang ada", Toast.LENGTH_SHORT).show()
             }
         }
-        textLinkLogin.setOnClickListener {
-            val intent = Intent(this, LoginPage::class.java)
-            startActivity(intent)
-        }
-        buttonBack.setOnClickListener{
+        binding.linkLogin.setOnClickListener {
+            startActivity(Intent(this, LoginPage::class.java))
             finish()
         }
-    }
-
-    private fun isValidInput(email: String, password: String, password2: String): Boolean {
-        return email.isNotEmpty() && password.isNotEmpty() && password == password2
+        binding.btnBack.setOnClickListener {
+            finish()
+        }
     }
 }

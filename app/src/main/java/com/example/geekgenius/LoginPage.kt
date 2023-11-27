@@ -7,50 +7,52 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.geekgenius.databinding.ActivityLoginPageBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginPage : AppCompatActivity() {
 
-    private val registeredEmail = "contoh@gmail.com"
-    private val registeredPassword = "123456"
-    private lateinit var textLinkRegister : TextView
-    private lateinit var buttonBack: Button
+    private lateinit var binding: ActivityLoginPageBinding
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        binding = ActivityLoginPageBinding.inflate(layoutInflater)
+        firebaseAuth = FirebaseAuth.getInstance()
+
         super.onCreate(savedInstanceState)
+        setContentView(binding.root)
 
-        setContentView(R.layout.activity_login_page)
-
-        val editTextEmail = findViewById<EditText>(R.id.etEmail)
-        val editTextPassword = findViewById<EditText>(R.id.etPasswordL)
-        val buttonLogin = findViewById<Button>(R.id.btnLogin)
-        textLinkRegister = findViewById(R.id.linkLogin)
-        buttonBack = findViewById(R.id.btnBack)
-
-        buttonLogin.setOnClickListener {
-            val email = editTextEmail.text.toString().trim()
-            val password = editTextPassword.text.toString().trim()
-
-            if (isValidCredentials(email, password)) {
-
-                Toast.makeText(this, "Login berhasil", Toast.LENGTH_SHORT).show()
-
-                val intent = Intent(this, DashboardPage::class.java)
-                startActivity(intent)
-                finish()
+        binding.btnLogin.setOnClickListener {
+            val email = binding.etEmail.text.toString()
+            val password = binding.etPassword.text.toString()
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                if (password.length >= 6) {
+                    firebaseAuth.signInWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(this) { task ->
+                            if (task.isSuccessful) {
+                                Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show()
+                                val intent = Intent(this, DashboardPage::class.java)
+                                startActivity(intent)
+                                finish()
+                            } else {
+                                Toast.makeText(this, "Login Gagal", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                } else {
+                    Toast.makeText(this, "Password minimal 6 karakter", Toast.LENGTH_SHORT).show()
+                }
             } else {
-                Toast.makeText(this, "Email atau password salah", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Mohon isi semua fields yang ada", Toast.LENGTH_SHORT).show()
             }
         }
 
-        textLinkRegister.setOnClickListener {
-            val intent = Intent(this, RegisterPage::class.java)
-            startActivity(intent)
+        binding.linkRegister.setOnClickListener {
+            startActivity(Intent(this, RegisterPage::class.java))
         }
-        buttonBack.setOnClickListener{
+        binding.btnBack.setOnClickListener{
             finish()
         }
     }
-    private fun isValidCredentials(email: String, password: String): Boolean {
-        return email == registeredEmail && password == registeredPassword
-    }
+
 }
