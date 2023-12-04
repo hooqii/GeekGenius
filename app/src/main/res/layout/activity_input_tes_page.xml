@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".InputTesPage">
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:background="@drawable/backarrow"
+        android:contentDescription="Back Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/geek_logo_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textHeaderTes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:text="Isi bila sesuai dengan kepribadianmu !"
+        android:layout_marginHorizontal="35dp"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingTop="25dp"
+        android:paddingStart="30dp"
+        android:textColor="@color/dark_violet"
+        android:textSize="22dp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/wadahcheckbox">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/wadahcheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="50px"
+        android:paddingEnd="50px"
+        tools:ignore="MissingConstraints"
+        android:paddingTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/textHeaderTes">
+
+        <CheckBox
+            android:id="@+id/F1"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suka Bercerita" />
+
+        <CheckBox
+            android:id="@+id/F2"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Memiliki ingatan bagus tentang hal kecil" />
+
+        <CheckBox
+            android:id="@+id/F3"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suka dengan permainan kata-kata, seperti TTS dan Puzzle" />
+
+        <CheckBox
+            android:id="@+id/F4"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hobi membaca buku" />
+
+        <CheckBox
+            android:id="@+id/F5"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hebat berbicara di depan umum" />
+
+        <CheckBox
+            android:id="@+id/F6"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sering menyindir ketika berargumen" />
+
+        <CheckBox
+            android:id="@+id/F7"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sering menyampaikan dan menuliskan ide-ide yang ada di otak" />
+
+        <CheckBox
+            android:id="@+id/F8"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mengingat dengan cara menyanyikan" />
+
+        <CheckBox
+            android:id="@+id/F9"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bisa memperbaiki sesuatu setelah membaca buku panduannya" />
+
+        <CheckBox
+            android:id="@+id/F10"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lebih suka menulis dan mencari informasi di perpustakaan" />
+
+        <CheckBox
+            android:id="@+id/F11"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sangat menyukai matematika" />
+
+        <CheckBox
+            android:id="@+id/F12"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menyukai permainan yang menggunakan logika" />
+
+        <CheckBox
+            android:id="@+id/F13"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senang jika berhasil menyelesaikan soal matematika" />
+
+        <CheckBox
+            android:id="@+id/F14"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mengurutkan sesuatu agar mudah diingat" />
+
+        <CheckBox
+            android:id="@+id/F15"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Penasaran dengan cara kerja suatu benda" />
+
+        <CheckBox
+            android:id="@+id/F16"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menyukai komputer dan permainan tentang angka" />
+
+        <CheckBox
+            android:id="@+id/F17"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salah satu permainan favorit adalah monopoli atau catur" />
+
+        <CheckBox
+            android:id="@+id/F18"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mencari solusi dengan adil dan logis" />
+
+        <CheckBox
+            android:id="@+id/F19"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Memperbaiki barang yang rusak dengan melihat komponen yang ada" />
+
+        <CheckBox
+            android:id="@+id/F20"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lebih suka membuat grafik atau diagram" />
+
+        <CheckBox
+            android:id="@+id/F21"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suka melihat peta daripada petunjuk tertulis mengenai letak suatu tempat" />
+
+        <CheckBox
+            android:id="@+id/F22"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sering melamun" />
+
+        <CheckBox
+            android:id="@+id/F23"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hobi fotografi" />
+
+        <CheckBox
+            android:id="@+id/F24"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senang menggambar dan menciptakan sesuatu" />
+
+        <CheckBox
+            android:id="@+id/F25"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senang mengingat melalui diagram" />
+
+        <CheckBox
+            android:id="@+id/F26"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hobi mencorat-coret di atas kertas" />
+
+        <CheckBox
+            android:id="@+id/F27"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lebih suka memperhatikan gambar daripada tulisan" />
+
+        <CheckBox
+            android:id="@+id/F28"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saat berargumen, mencoba menjaga jarak dan menunjukkan beberapa solusi" />
+
+        <CheckBox
+            android:id="@+id/F29"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Memperbaiki barang dengan cara melihat diagram mengenai cara kerja barang tersebut" />
+
+        <CheckBox
+            android:id="@+id/F30"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lebih suka menggambarkan suatu hal yang menurut kamu penting" />
+
+        <CheckBox
+            android:id="@+id/F31"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menyukai olahraga senam" />
+
+        <CheckBox
+            android:id="@+id/F32"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menyukai pekerjaan yang membentuk sesuatu" />
+
+        <CheckBox
+            android:id="@+id/F33"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menyentuh benda-benda yang baru kamu lihat" />
+
+        <CheckBox
+            android:id="@+id/F34"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tidak suka duduk terdiam untuk waktu yang lama" />
+
+        <CheckBox
+            android:id="@+id/F35"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sering menggerakkan anggota badan ketika berbicara dengan orang lain" />
+
+        <CheckBox
+            android:id="@+id/F36"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mengingat sesuatu dengan menuliskannya berkali-kali" />
+
+        <CheckBox
+            android:id="@+id/F37"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sering mengetuk-ngetukkan pensil ketika sedang belajar atau rapat" />
+
+        <CheckBox
+            android:id="@+id/F38"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saat berargumen, lebih memilih menyerang langsung atau menghindari lawan bicara" />
+
+        <CheckBox
+            android:id="@+id/F39"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dalam memperbaiki barang, kamu membongkarnya terlebih dahulu baru memperbaikinya" />
+
+        <CheckBox
+            android:id="@+id/F40"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lebih memilih memindahkan suatu barang atau menciptakan suatu barang" />
+
+        <CheckBox
+            android:id="@+id/F41"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Memiliki minat yang besar dalam dunia musik" />
+
+        <CheckBox
+            android:id="@+id/F42"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suka menyenandungkan lagu kesukaan ketika belajar atau bekerja" />
+
+        <CheckBox
+            android:id="@+id/F43"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suka bernyanyi" />
+
+        <CheckBox
+            android:id="@+id/F44"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bisa memainkan salah satu alat musik" />
+
+        <CheckBox
+            android:id="@+id/F45"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bisa belajar atau bekerja sambil mendengarkan musik" />
+
+        <CheckBox
+            android:id="@+id/F46"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dalam mengingat sesuatu lebih mudah dengan membentuk sebuah irama" />
+
+        <CheckBox
+            android:id="@+id/F47"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ketika berargumen sering membuat bunyi-bunyian seperti menggebrak meja dan lain-lain" />
+
+        <CheckBox
+            android:id="@+id/F48"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bisa menghafal nada-nada dari beberapa lagu yang kamu kenal" />
+
+        <CheckBox
+            android:id="@+id/F49"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ketika memperbaiki sesuatu, sering mengetuk-ngetukkan jari di atas barang yang rusak sambil mencari solusi" />
+
+        <CheckBox
+            android:id="@+id/F50"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suka mengubah dan memakai kata-kata baru pada nada atau musik yang dikenal" />
+
+        <CheckBox
+            android:id="@+id/F51"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bergaul dengan baik" />
+
+        <CheckBox
+            android:id="@+id/F52"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senang dengan aktivitas sosial" />
+
+        <CheckBox
+            android:id="@+id/F53"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Memiliki banyak teman dekat" />
+
+        <CheckBox
+            android:id="@+id/F54"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senang mengajar orang lain" />
+
+        <CheckBox
+            android:id="@+id/F55"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senang bekerja dalam sebuah tim" />
+
+        <CheckBox
+            android:id="@+id/F56"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Memiliki figur pemimpin" />
+
+        <CheckBox
+            android:id="@+id/F57"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dalam mengingat sesuatu, menggunakan orang lain untuk menguji ingatannya" />
+
+        <CheckBox
+            android:id="@+id/F58"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suka meminta bantuan teman atau ahli dalam berargumen" />
+
+        <CheckBox
+            android:id="@+id/F59"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jika barang kamu rusak, meminta orang yang ahli untuk memperbaikinya" />
+
+
+        <CheckBox
+            android:id="@+id/F60"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kamu lebih suka mengatur pembagian tugas dalam sebuah tim" />
+
+        <CheckBox
+            android:id="@+id/F61"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lebih memilih bekerja sendiri" />
+
+        <CheckBox
+            android:id="@+id/F62"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sering menulis buku diary" />
+
+        <CheckBox
+            android:id="@+id/F63"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menyukai diri sendiri dari pada orang lain" />
+
+        <CheckBox
+            android:id="@+id/F64"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tidak nyaman dalam keramaian" />
+
+        <CheckBox
+            android:id="@+id/F65"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Memiliki keinginan untuk hidup mandiri" />
+
+        <CheckBox
+            android:id="@+id/F66"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mengenali diri dengan baik" />
+
+        <CheckBox
+            android:id="@+id/F67"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dalam mengingat sesuatu, sering menutup mata dan membayangkan apa yang ingin diingat" />
+
+        <CheckBox
+            android:id="@+id/F68"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sering meminta izin untuk menenangkan diri atau menyendiri saat berargumen" />
+
+        <CheckBox
+            android:id="@+id/F69"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akan mempertimbangkan barang yang rusak, apakah layak diperbaiki atau tidak" />
+
+        <CheckBox
+            android:id="@+id/F70"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senang jika dapat memberikan apa yang dimiliki" />
+
+        <CheckBox
+            android:id="@+id/F71"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Memperhatikan orang-orang sekitar" />
+
+        <CheckBox
+            android:id="@+id/F72"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senang berkebun" />
+
+        <CheckBox
+            android:id="@+id/F73"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senang jalan-jalan dan melihat keindahan alam" />
+
+        <CheckBox
+            android:id="@+id/F74"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mengoleksi beberapa barang, seperti perangko, lukisan, dll" />
+
+        <CheckBox
+            android:id="@+id/F75"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Memiliki keinginan pindah ke tempat yang sejuk untuk menikmati keindahan alamnya" />
+
+        <CheckBox
+            android:id="@+id/F76"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dalam mengingat suatu hal, akan dikelompokkan terlebih dahulu" />
+
+        <CheckBox
+            android:id="@+id/F77"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senang saat mempelajari benda-benda di sekitar" />
+
+        <CheckBox
+            android:id="@+id/F78"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sering membayangkan lawan bicara dengan orang yang kita kenal saat berargumen" />
+
+        <CheckBox
+            android:id="@+id/F79"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menggunakan barang yang ada di sekitar untuk memperbaiki barang yang rusak" />
+
+        <CheckBox
+            android:id="@+id/F80"
+            style="@style/MyCheckBoxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lebih senang mengelompokkan informasi agar lebih mudah dipahami" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnTes"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_theme"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Hasil Tes"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wadahcheckbox" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
