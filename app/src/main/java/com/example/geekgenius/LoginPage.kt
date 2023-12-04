@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.example.geekgenius.databinding.ActivityLoginPageBinding
+import com.geek.app.ui.main.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginPage : AppCompatActivity() {
@@ -34,7 +35,7 @@ class LoginPage : AppCompatActivity() {
                         .addOnCompleteListener(this) { task ->
                             if (task.isSuccessful) {
                                 Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show()
-                                val intent = Intent(this, DashboardPage::class.java)
+                                val intent = Intent(this, MainActivity::class.java)
                                 startActivity(intent)
                                 finish()
                             } else {

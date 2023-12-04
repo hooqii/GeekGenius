@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Geek Genius</string>
     <string name="default_web_client_id">false</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ensiklopedia">Ensiklopedia</string>
 </resources>

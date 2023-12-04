@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.content.Intent
 import android.widget.Toast
 import com.example.geekgenius.databinding.ActivityWellcomePageBinding
+import com.geek.app.ui.main.MainActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -84,7 +85,7 @@ class WellcomePage : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Berhasil Masuk Dengan Google", Toast.LENGTH_SHORT).show()
                     val user = firebaseAuth.currentUser
-                    startActivity(Intent(this, DashboardPage::class.java))
+                    startActivity(Intent(this, MainActivity::class.java))
                 } else {
                     Toast.makeText(this, "Autentikasi Gagal", Toast.LENGTH_SHORT).show()
                     // If sign in fails, display a message to the user.

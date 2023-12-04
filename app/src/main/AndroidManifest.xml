@@ -48,6 +48,12 @@
         <activity
             android:name=".DashboardPage"
             android:exported="false" />
+        <activity
+            android:name="com.geek.app.ui.detail_article.DetailArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.geek.app.ui.main.MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

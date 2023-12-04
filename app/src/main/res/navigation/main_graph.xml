@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/articleFragment">
+
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.geek.app.ui.article.ArticleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article" >
+        <action
+            android:id="@+id/action_articleFragment_to_detailArticleActivity"
+            app:destination="@id/detailArticleActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/encyclopediaFragment"
+        android:name="com.geek.app.ui.encyclopedia.EncyclopediaFragment"
+        android:label="fragment_encyclopedia"
+        tools:layout="@layout/fragment_encyclopedia" >
+        <action
+            android:id="@+id/action_encyclopediaFragment_to_detailArticleActivity"
+            app:destination="@id/detailArticleActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.geek.app.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <activity
+        android:id="@+id/detailArticleActivity"
+        android:name="com.geek.app.ui.detail_article.DetailArticleActivity"
+        android:label="activity_detail_article"
+        tools:layout="@layout/activity_detail_article" />
+</navigation>
