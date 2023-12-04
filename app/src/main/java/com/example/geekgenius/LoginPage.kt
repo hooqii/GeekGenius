@@ -3,6 +3,7 @@ package com.example.geekgenius
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
+import android.text.method.PasswordTransformationMethod
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -14,6 +15,7 @@ class LoginPage : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginPageBinding
     private lateinit var firebaseAuth: FirebaseAuth
+    private var isPasswordVisible= false
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -52,6 +54,22 @@ class LoginPage : AppCompatActivity() {
         }
         binding.btnBack.setOnClickListener{
             finish()
+        }
+
+        binding.ivShowPassword.setOnClickListener {
+            isPasswordVisible = !isPasswordVisible
+            val transformationMethod = if (isPasswordVisible) {
+                null
+            } else {
+                PasswordTransformationMethod.getInstance()
+            }
+            binding.etPassword.transformationMethod = transformationMethod
+
+            if (isPasswordVisible) {
+                binding.ivShowPassword.setImageResource(R.drawable.icon_eye_on)
+            } else {
+                binding.ivShowPassword.setImageResource(R.drawable.icon_eye_off)
+            }
         }
     }
 
