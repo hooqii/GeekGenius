@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="48dp"
+        app:cardCornerRadius="65dp"
         app:cardElevation="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/container_text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,8 +43,7 @@
             android:id="@+id/iv_profile"
             android:layout_width="138dp"
             android:layout_height="138dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/avatar" />
+            android:src="@drawable/profile" />
 
     </com.google.android.material.card.MaterialCardView>
 

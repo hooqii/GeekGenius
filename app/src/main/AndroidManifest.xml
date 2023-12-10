@@ -13,6 +13,12 @@
         android:theme="@style/Theme.GeekGenius"
         tools:targetApi="31">
         <activity
+            android:name=".ArtikelPage"
+            android:exported="false" />
+        <activity
+            android:name=".EnsiklopediaPage"
+            android:exported="false" />
+        <activity
             android:name=".HasilTesPage"
             android:exported="false" />
         <activity
