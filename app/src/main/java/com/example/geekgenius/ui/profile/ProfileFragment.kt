@@ -8,14 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.example.geekgenius.R
-import com.example.geekgenius.RegisterPage
 import com.example.geekgenius.WellcomePage
 import com.example.geekgenius.databinding.FragmentProfileBinding
 import com.geek.app.data.shared_preference.UserPreference
 import com.geek.app.model.User
+import com.example.geekgenius.ui.profile.EditProfileFragment
 
-class ProfileFragment : Fragment() {
+class ProfileFragment : Fragment(), EditProfileFragment.EditProfileListener {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding
@@ -38,32 +39,23 @@ class ProfileFragment : Fragment() {
         binding?.apply {
             preference.getData().run {
                 etEmail.setText(email)
-                etUsername.setText(username)
-                etPassword.setText(password)
+                etName.setText(username)
             }
 
             btnEditProfile.setOnClickListener {
-                preference.saveData(
-                    User(
-                        username = etUsername.text.toString().trim(),
-                        password = etPassword.text.toString().trim(),
-                        email = etEmail.text.toString().trim(),
-                    )
-                )
-                Toast.makeText(requireActivity(), "Edit Sukses", Toast.LENGTH_SHORT).show()
+                navigateToEditProfileFragment()
             }
 
             btnLogout.setOnClickListener {
-                // Clear user data or perform logout actions
                 preference.clearData()
                 Toast.makeText(requireActivity(), "Logout Successful", Toast.LENGTH_SHORT).show()
                 val intent = Intent(requireContext(), WellcomePage::class.java)
                 startActivity(intent)
-                
-                // Navigate to login screen or any other desired destination
-                // For example, if you are using Navigation Component:
-                // findNavController().navigate(R.id.action_profileFragment_to_loginFragment)
             }
+        } ?: run {
+            // Handle the case when binding is null
+            Toast.makeText(requireActivity(), "Binding is null", Toast.LENGTH_SHORT).show()
+            // You can choose to show some default content or handle it as appropriate for your case.
         }
     }
 
@@ -72,4 +64,20 @@ class ProfileFragment : Fragment() {
         _binding = null
     }
 
+    override fun onProfileUpdated() {
+        // Handle profile update logic here
+        Toast.makeText(requireActivity(), "Profile updated", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun navigateToEditProfileFragment() {
+        val editProfileFragment = EditProfileFragment.newInstance()
+        val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+        transaction.setCustomAnimations(
+            R.anim.slide_in_right,  // enter animation
+            R.anim.slide_out_left,   // exit animation
+        )
+        transaction.replace(android.R.id.content, editProfileFragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
 }

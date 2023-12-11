@@ -25,13 +25,13 @@
         android:layout_width="225dp"
         android:layout_height="225dp"
         android:layout_marginTop="88dp"
-        android:src="@drawable/ui_logo"
+        android:src="@drawable/logo_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvNamaKampus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ivLogoKampus" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvDetailKampus"
         android:layout_width="350dp"
         android:layout_height="0dp"
         android:layout_marginTop="28dp"
@@ -54,7 +54,7 @@
         android:text="UI adalah salah satu universitas riset atau institusi akademik terkemuka di dunia yang terus mengejar pencapaian tertinggi dalam hal penemuan, pengembangan dan difusi pengetahuan secara regional dan global."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaKampus" />
 
     <View
         android:layout_width="320dp"
@@ -63,10 +63,10 @@
         android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailKampus" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvPrestasi"
         android:layout_width="328dp"
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
@@ -75,7 +75,7 @@
         android:text="Dengan prestasi yang terus diraihnya UI berada di peringkat kampus terbaik di Indonesia berdasarkan penilaian Lembaga pemeringkatan dunia."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailKampus" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

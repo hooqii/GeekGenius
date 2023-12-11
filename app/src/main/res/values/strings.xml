@@ -3,4 +3,27 @@
     <string name="default_web_client_id">false</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ensiklopedia">Ensiklopedia</string>
+
+    <string-array name="kecerdasan_name">
+        <item>Kecerdasan Verbal</item>
+        <item>Kecerdasan Logis</item>
+        <item>Kecerdasan Visual</item>
+        <item>Kecerdasan Kinestatik</item>
+        <item>Kecerdasan Musikal</item>
+        <item>Kecerdasan Interpersonal</item>
+        <item>Kecerdasan Intrapersonal</item>
+        <item>Kecerdasan Naturalis</item>
+    </string-array>
+
+    <string-array name="data_jurusan">
+        <item>Jurusan Komunikasi, Sastra, Pariwisata atau Hukum</item>
+        <item>Jurusan Akuntansi, Matematika, Sains, Aktuaria, atau Programmer</item>
+        <item>Jurusan Arsitektur, Seni Rupa, DKV, Teknik, atau Pilot</item>
+        <item>Jurusan Keolahragaan</item>
+        <item>Jurusan Musik</item>
+        <item>Jurusan Perawat, Kesehatan Masyarakat, Gizi, Pendidikan</item>
+        <item>Jurusan Psikologi</item>
+        <item>Jurusan Dokter Hewan, Peternakan, Kelautan atau Kehutanan</item>
+    </string-array>
+
 </resources>

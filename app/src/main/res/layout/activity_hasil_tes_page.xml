@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="Hasil :"
+        android:textSize="18sp"
         android:fontFamily="@font/poppins_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -34,10 +35,10 @@
     </TextView>
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/txtKecerdasan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="25dp"
         android:text="Kecerdasan Verbal"
         android:fontFamily="@font/poppins_regular"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7"></TextView>
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/txtJurusan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
@@ -58,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/txtKecerdasan"
         android:gravity="center"></TextView>
     <Button
         android:id="@+id/btnSelesai"
@@ -72,7 +73,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/txtJurusan" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

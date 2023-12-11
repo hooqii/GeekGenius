@@ -9,7 +9,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.geekgenius.R
 
-class LogoAdapter(private val logoList: List<Int>, private val itemClickListener: (Int) -> Unit) : RecyclerView.Adapter<LogoAdapter.LogoViewHolder>() {
+class KampusAdapter(private val logoList: List<Int>, private val itemClickListener: (Int) -> Unit) : RecyclerView.Adapter<KampusAdapter.LogoViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LogoViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_logo_kampus, parent, false)

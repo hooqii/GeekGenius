@@ -20,6 +20,12 @@ class ArticleFragment : Fragment() {
     private val binding get() = _binding
     private val viewModel by viewModels<ArticleViewModel>()
 
+    companion object {
+        fun newInstance(): ArticleFragment {
+            return ArticleFragment()
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,

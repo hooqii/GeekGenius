@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
 import com.example.geekgenius.R
 import com.geek.app.ui.main.MainActivity
+//import com.geek.app.ui.main.MainActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
