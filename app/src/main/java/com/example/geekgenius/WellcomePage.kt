@@ -85,7 +85,7 @@ class WellcomePage : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Berhasil Masuk Dengan Google", Toast.LENGTH_SHORT).show()
                     val user = firebaseAuth.currentUser
-                    startActivity(Intent(this, MainActivity::class.java))
+                    startActivity(Intent(this, DashboardPage::class.java))
                 } else {
                     Toast.makeText(this, "Autentikasi Gagal", Toast.LENGTH_SHORT).show()
                     // If sign in fails, display a message to the user.

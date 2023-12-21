@@ -35,7 +35,7 @@ class LoginPage : AppCompatActivity() {
                         .addOnCompleteListener(this) { task ->
                             if (task.isSuccessful) {
                                 Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show()
-                                val intent = Intent(this, MainActivity::class.java)
+                                val intent = Intent(this, DashboardPage::class.java)
                                 startActivity(intent)
                                 finish()
                             } else {
